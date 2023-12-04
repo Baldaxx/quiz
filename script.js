@@ -1,65 +1,64 @@
-const questionContainer = document.querySelector(".box");
-const questionContainer2 = document.querySelector(".box2");
-const btn1 = document.getElementById ("btn-1")
-const btn2 = document.getElementById ("btn-2")
-const btn3 = document.getElementById ("btn-3")
-const btn4 = document.getElementById ("btn-4")
-const btn5 = document.getElementById ("btn-5")
-const btn6 = document.getElementById ("btn-6")
-const response = document.querySelector ("p")
-const response2 = document.querySelector (".p2")
-const ring = () => {
-    const audio = new Audio();
-    audio.src = "Img/Breponse.mp3";
-    audio.play();
-  };
-  const ring2 = () => {
-    const audio2 = new Audio();
-    audio2.src = "Img/Mreponse.mp3";
-    audio2.play();
-  };
+const questions = [
+    {
+        question:
+        "Qu'est-ce que la matrice ?",
+        answers: [
+        "Une intelligence artificielle",
+        "La simulation d'un monde imaginaire",
+        "Un programme auto-répliquant",
+        ],
+        correctAnswerIndex: 2
+    },
+    { 
+        question:
+        "Dans quel but a-t-elle été conçue ?",
+        answers: [
+            "Maintenir les humains sous contrôle",
+            "Détruire un virus informatique",
+            "Détruire l'humanité",
+        ],
+        correctAnswerIndex: 1
+    },
+    {
+        question:
+        "Qui a assombri le ciel, selon Morphéus ?",
+        answers: [
+        "Les machines",
+        "Les humains",
+        "Les deux en même temps",
+        ],
+        correctAnswerIndex: 2
+    },
+    {
+        question:
+        "Quelle pilule offre la vérité à Néo ?",
+        answers: [
+        "La bleue",
+        "La rouge",
+        "La verte",
+        ],
+        correctAnswerIndex: 2
+    }
+];
+const state = {
+    score: 0,
+    currentQuestionIndex: 0
+}
 
-questionContainer.addEventListener("click", () => {
-  questionContainer.style.opacity = "90%";
-  questionContainer.style.borderRadius = "15%";
+displayQuestion()
 
-});questionContainer2.addEventListener("click", () => {
-    questionContainer2.style.opacity = "90%";
-    questionContainer2.style.borderRadius = "15%";
-  });
+const questions = [questions, state].question
+for (let i = 0; i < question.length; i++) {
+    console.log(question[i]) 
+}
+// const ring = () => {
+//     const audio = new Audio();
+//     audio.src = "Img/Breponse.mp3";
+//     audio.play();
+//   };
+//   const ring2 = () => {
+//     const audio2 = new Audio();
+//     audio2.src = "Img/Mreponse.mp3";
+//     audio2.play();
+//   };
 
-btn1.addEventListener("click", () => {
-    response.classList.add ('show-response')
-    response.style.background ="red"  
-    ring2 ();
-});
-
-btn2.addEventListener("click", () => {
-    response.classList.add ('show-response')
-    response.style.background ="green"
-    ring ();
-});
-
-btn3.addEventListener("click", () => {
-    response.classList.add ('show-response')
-    response.style.background ="red"
-    ring2 ();
-});
-
-btn4.addEventListener("click", () => {
-    response2.classList.add ('show-response')
-    response2.style.background ="green"
-    ring ();
-});
-
-btn5.addEventListener("click", () => {
-    response2.classList.add ('show-response')
-    response2.style.background ="red"
-    ring2 ();
-});
-
-btn6.addEventListener("click", () => {
-    response2.classList.add ('show-response')
-    response2.style.background ="red"
-    ring2 ();
-});
