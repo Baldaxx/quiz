@@ -17,8 +17,35 @@ body {
   background: black;
 } 
 
-p {
+.box2 {
+  transition: 0.25sec;
+  background: black;
+} 
+
+p, .p2 {
   visibility: hidden;
   width: 240px;
   margin: 10px auto 0;
+  opacity: 0;
+  transition: .6s;
+  transform: translateX(-500px);
+}
+
+.show-response {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(+000px);
+}
+
+h1 {
+font-family:  Pixelify Sans;
+font-size: 100px;
+margin: 2px;
+text-align:start;
+margin-left: 10px;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 10px;
 }
